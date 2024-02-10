@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+%\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage[export]{adjustbox}
+\usepackage{venndiagram}
+\usepackage{graphicx}
+
+%\graphicspath{ {images/} }
+%\graphicspath{ {imagenest\} }
+
+\usepackage{tikz}
+
+\newtheorem{Def}{\quad Definición}
+\newtheorem{Note}{\quad Nota}
+\newtheorem{Ejem}{\quad Ejemplo}
+\newtheorem{Prop}{\quad Propiedad}
+\newtheorem{Theorem}{\quad Teorema}
+\newtheorem{Images}{\quad Imagen}
+
+
+\title{Probabilidad}
+\author{REYNA LEON  APARICIO}
+\date{Agosto 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Teoría de conjuntos}
+
+\subsection{Introducción}
+
+Los juegos que ocupan los dados buscan un resultado al azar, por lo que el jugador desea crear un análisis aleatorio del posible resultado  del objeto para valorar su ganancia o pérdida, sin importar el número de intentos sin éxito el cálculo de sus predicciones son incalculables.
+
+
+
+\subsection{La Teoría de conjuntos}
+
+ Un popular apostador conocido como el caballero de Meré, planteo la posibilidad de ganar a Blaise Pascal,el cual al mismo tiempo consulta con Pierre de Fermat por lo que empiezan a intercambiar cartas, aunque no se conoce todo lo que escribieron son muy importantes para los primeros fundamentos de la probabilidad. Meré creyó que había encontrado una falsedad en el juego, observando que el comportamiento de los dados era diferente cuando se utilizaba un dado que cuando se utilizaban dos dados. Pero su comparación era errónea entre la probabilidad de sacar un seis con un solo dado o de sacar un seis con dos dados. Para este caballero debería existir una relación proporcional entre el número de jugadas para conseguir el efecto deseado en uno y otro caso. 
+ 
+\begin{Def}
+La Teoría de conjuntos se ocupa para expresar la relación entre los miembros y los objetos analizando sus propiedades para comprender y comunicar conceptos matemáticos de manera más fácilmente, es decir que estudia los conjuntos.
+\end{Def}
+
+\begin{Def}
+Un conjunto es una colección de elementos definidos que llevan las ideas de elemento y pertenencia, esto quiere decir que un elemento $ \omega $ pertenece al conjunto. 
+\end{Def}
+
+\begin{Def} 
+Un espacio muestral es el conjunto de todos los resultados posibles que se pueden dividir en grupos de un experimento, es decir se forma con todos los resultados que ya no es posible desglosar más.
+\end{Def}
+
+
+\begin{Def} 
+Un evento es un subconjunto del espacio muestral. Por lo que un conjunto A se dice que es subconjunto de B si y solo si todo elemento de A es también un elemento de B, (A  $\subset$ B). 
+\end{Def}
+
+\begin{tikzpicture}[every node/.style={rectangle, fill=blue!20!white} ]
+\node {Lanzamiento de un dado} [sibling distance=2.5cm]
+child {node {un sexto} 
+}
+child {node {un sexto} 
+}
+child {node {un sexto} 
+}
+child {node {un sexto} 
+}
+child {node {un sexto} 
+}
+child {node {un sexto} 
+};
+\end{tikzpicture}
+
+\begin{Ejem}
+El caballero no tuvo en cuenta que al lanzar un dado se tiene un espacio muestral $ \Omega = \{ 1, 2, 3, 4, 5,6 \}$ por lo que obtener un seis en un lanzamiento es: $ \frac{1}{6} $, por otra parte lanzar dos dados nos da como resultado  $6^2 = 36$, por  tanto obtener una pareja de seis es $\frac{1}{36}$.
+\end{Ejem}
+
+\vspace{.3cm}
+
+\begin{tabular}{| c | c | c | c | c | c | c | }
+\hline Primer dado & \multicolumn{6}{ |c| }{Segundo dado} \\ 
+\hline
+&1 & 2 & 3 & 4 & 5 & 6\\ \hline
+1&(1,1)&(1,2)&(1,3)&(1,4)&(1,5)&(1,6)\\ \hline
+2&(2,1)&(2,2)&(2,3)&(2,4)&(2,5)&(2,6)\\ \hline
+3&(3,1)&(3,2)&(3,3)&(3,4)&(3,5)&(3,6)\\ \hline
+4&(4,1)&(4,2)&(4,3)&(4,4)&(4,5)&(4,6)\\ \hline
+5&(5,1)&(5,2)&(5,3)&(5,4)&(5,5)&(5,6)\\ \hline
+6&(6,1)&(6,2)&(6,3)&(6,4)&(6,5)&(6,6)\\ \hline
+\end{tabular}
+
+% Como podemos observar los espacios muestrales son diferentes al tirar un dado o dos, 
+
+
+
+\begin{Ejem}
+Retomando el problema anterior podemos tener dos eventos: 
+\\
+
+A: obtener un seis en el primer lanzamiento. 
+
+B: obtener un seis en el segundo lanzamiento. 
+\end{Ejem}
+
+\begin{Images}
+Entonces la unión de estos eventos se representan  en el siguiente diagrama: 
+
+%"D:\tesis y servicio\tesis\imagenest\Captura de pantalla 2023-11-13 223118.png"
+\end{Images}
+
+
+\begin{Def} 
+La probabilidad frecuentista refiere a experimentos que se pueden repetir indefinidamente con las mismas condiciones, por lo que los sucesos tienden a estabilizarse alrededor de un número fijo. 
+\end{Def}
+
+\begin{Def} 
+Las propiedades de conjuntos son los eventos que se pueden combinar para dar lugar a nuevos eventos.
+\end{Def}
+
+\begin{Ejem}
+Debido a que para tener un doble seis al lanzar dos dados es $\frac{1}{36}$, para poder conseguir un 6 en uno de 37 lanzamientos de dos dados seria 37$* \frac{1}{36} = \frac{37}{36} > 1$ .
+\end{Ejem}
+
+\begin{Ejem}
+Retomando los eventos anteriores A y B podemos realizar la Regla de conjuntos: \\
+A $\cup$ B = \{(6,1),(6,2),(6,3),(6,4),(6,5),(6,6),(1,6),(2,6),(3,6),(4,6),(5,6),(6,6)\} \\
+A $\cap$ B = \{ (6,6) \} \\
+A - B = A $\backslash$ B = \{(6,1),(6,2),(6,3),(6,4),(6,5) \} \\
+$A^c$ = \{(1,6),(2,6),(3,6),(4,6),(5,6) \}
+\end{Ejem}
+
+\begin{Def} 
+La sigma-álgebra es una clase de subconjuntos del espacio muestral sobre la que puede establecerse una probabilidad con una estructura mínima, ya que no puede ser una colección cualquiera de sucesos.
+\end{Def}
+
+\begin{Def} 
+La probabilidad se usa para indicar que un  experimento puede tener la posibilidad de que ocurran ciertos resultados definidos.
+\end{Def}
+
+\begin{Note} 
+En los juegos donde intervienen dos dados sabemos que hay un número de resultados de 36, por lo que nuestra apuesta depende de si tenemos la seguridad de que obtendremos una pareja de seis, entonces creemos tener una posibilidad mayor a un $\frac{1}{36}$, aunque si consideramos que no es una buena apuesta nuestro nivel de certeza es inferior a un $\frac{1}{36}$. 
+\end{Note}
+
+
+
+\section{Variable Aleatoria}
+
+Las serpientes y escaleras es un juego que enseña las consecuencias de las buenas y malas acciones, por lo que  intentaba liberar el libre albedrío con la suerte, aunque dependiendo de la versión del juego el número de las casillas y forma  variaba,por lo que el objetivo es ser el primer jugador en llegar hasta el final moviéndose desde el cuadro de inicio al cuadrado de met.
+
+\begin{Def} 
+La variable aleatoria  es cualquier variable cuantitativa cuyo valor numérico sea determinado un experimento aleatorio y por lo tanto al azar.
+\end{Def}
+
+
+% en cada turno el jugador lanzara dos dados donde el espacio muestral se compone de 36 pares ordenados (a,b) donde a y b pueden ser cualquier numero entero entre 1 y 6 y la suma de estos es el número de casillas que podrá avanzar  s={(1,1),(1,2),...,(6,6)} , en cada turno el jugador lanzara dos dados , es decir X(a+b)=a+b. por ejemplo  X(1,1)=2, X(2,3)=5, X(4,4)=8 X(6,5)=11, X(6,6)=12 entonces X es una variable aleatoria con un espacio de valor Rx={2,3,...,12} es decir ninguna suma puede ser inferior a 2 ni superior a 12. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+\begin{Def} 
+\end{Def}
+
+\begin{Ejem}
+\end{Ejem}
+
+
+
